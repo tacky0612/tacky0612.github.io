@@ -1,6 +1,7 @@
 body{
   height: 10rem;
   text-align: center;
+  align-items: center;
 }
 
 .header {
@@ -18,13 +19,17 @@ body{
 }
 
 .profile img{
-  width: 120px;
+  width: 250px;
   margin:20px;
+}
+
+.links{
+  text-align: center;
+  align-items: center;
 }
 
 .links img{
   vertical-align: middle;
   width: 60px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin:10px;
 }
