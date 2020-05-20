@@ -1,5 +1,4 @@
 body{
-  height: 10rem;
   text-align: center;
   align-items: center;
 }
@@ -24,12 +23,11 @@ body{
 }
 
 .links{
-  text-align: center;
-  align-items: center;
+  text-align:center;
 }
 
 .links img{
   vertical-align: middle;
-  width: 40px;
-  margin:5px;
+  width: 50px;
+  margin:10px;
 }
