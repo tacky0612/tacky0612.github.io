@@ -1,0 +1,223 @@
+$breakpoints: ('sm': 'screen and (max-width: 400px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 1000px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+$link-font-size: 70px;
+$link-font-size-mobile: 50px;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 700px;
+
+    @include mq(sm) {
+        min-width: inherit;
+    }
+}
+
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #BFFFFE;
+    font-weight: bold;
+    font-size: 25px;
+    width: 100%;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+
+    h1 {
+        padding: 30px;
+        margin: auto;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+}
+
+section {
+    width: 600px;
+
+    @include mq(sm) {
+        width: inherit;
+    }
+}
+
+.contents {
+    .content {
+        margin-top: 50px;
+    }
+
+    h2 {
+        padding-bottom: 8px;
+        font-size: 30px;
+        border-bottom: solid 3px black;
+    }
+
+    .profile img {
+        width: 250px;
+        margin: 40px 20px;
+        border-radius: 15%;
+
+        @include mq(sm) {
+            width: 150px;
+        }
+    }
+
+    .links {
+        text-align: center;
+
+    }
+
+    .link {
+        display: flex;
+        margin: 40px 30px;
+
+        @include mq(sm) {
+            margin: 40px 20px;
+        }
+
+        p {
+            margin: auto;
+        }
+
+        img {
+            width: $link-font-size;
+
+            @include mq(sm) {
+                width: $link-font-size-mobile;
+            }
+        }
+
+        .github a {
+            text-decoration: none;
+            color: #252a2e;
+            font-size: $link-font-size;
+
+            @include mq(sm) {
+                font-size: $link-font-size-mobile;
+            }
+        }
+
+        .twitter a {
+            text-decoration: none;
+            color: #55acee;
+            font-size: $link-font-size;
+
+            @include mq(sm) {
+                font-size: $link-font-size-mobile;
+            }
+        }
+
+        .insta {
+            position: relative;
+            display: inline-block;
+            width: $link-font-size;
+            height: $link-font-size;
+            background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+            background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+            overflow: hidden;
+            border-radius: 18px;
+
+            @include mq(sm) {
+                width: $link-font-size-mobile;
+                height: $link-font-size-mobile;
+                border-radius: 15px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 23px;
+                left: -18px;
+                width: 60px;
+                height: 60px;
+                background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+                background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+            }
+        }
+
+        .fa-instagram {
+            color: #FFF;
+            position: relative;
+            z-index: 2;
+            font-size: $link-font-size - 10;
+            line-height: $link-font-size;
+
+            @include mq(sm) {
+                font-size: $link-font-size-mobile - 10;
+                line-height: $link-font-size-mobile;
+            }
+        }
+
+        .youtube a {
+            text-decoration: none;
+            color: #ff0000;
+            font-size: $link-font-size;
+
+            @include mq(sm) {
+                font-size: $link-font-size-mobile;
+            }
+        }
+    }
+}
+
+.footer-margin {
+    margin-top: 50px;
+}
+
+footer {
+    width: 100%;
+    background-color: #dddddd;
+    padding: 0px;
+    margin-top: auto;
+
+    .footer {
+        &-inner {
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+        &-container {
+            margin: 20px;
+            display: flex;
+            flex-flow: column;
+
+            p {
+                margin: 10px 20px;
+                margin-left: auto;
+            }
+
+            .sns-links {
+                margin-left: auto;
+                display: flex;
+
+                .github a {
+                    text-decoration: none;
+                    color: #252a2e;
+                    font-size: 40px;
+                }
+
+                .twitter a {
+                    text-decoration: none;
+                    color: #55acee;
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

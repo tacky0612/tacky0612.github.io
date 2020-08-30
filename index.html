@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Profile | tacky0612</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" media="(min-width: 640px)" href="stylesheet_pc.css">
-    <link rel="stylesheet" media="(max-width: 640px)" href="stylesheet_mobile.css">
 
-    <link rel="icon" href="image/favicon.ico" />
+<head>
+  <meta charset="utf-8">
+  <title>Profile | tacky0612</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="stylesheet/reset.css">
+  <link rel="stylesheet" href="stylesheet/index.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="icon" href="image/favicon.ico" />
 
-    <!-- SNS設定 -->
-    <meta property="og:title" content="Profile | tacky0612" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tacky0612.github.io" />
-    <meta property="og:image" content="https://tacky0612.github.io/image/icon1.JPG" />
-    <meta property="og:description" content="tacky0612 Profile" />
+  <!-- SNS設定 -->
+  <meta property="og:title" content="Profile | tacky0612" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tacky0612.github.io" />
+  <meta property="og:image" content="https://tacky0612.github.io/image/icon1.JPG" />
+  <meta property="og:description" content="tacky0612 Profile" />
 
-    <!-- Twitter設定 -->
-    <meta name="twitter:card" content="summary"">
-    <meta name="twitter:site" content="@tacky0612">
-    <meta name="twitter:creator" content="@tacky0612" />
-    <meta name="twitter:title" content="Profile | tacky0612">
-    <meta name="twitter:description" content="My name is Yu Takitani. (Please call me tacky0612!) I’m a software engineer in Tokyo.">
-    <meta name="twitter:image" content="https://tacky0612.github.io/image/icon2.JPG">
+  <!-- Twitter設定 -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@tacky0612">
+  <meta name="twitter:creator" content="@tacky0612" />
+  <meta name="twitter:title" content="Profile | tacky0612">
+  <meta name="twitter:description"
+    content="My name is Yu Takitani. (Please call me tacky0612!) I’m a software engineer in Tokyo.">
+  <meta name="twitter:image" content="https://tacky0612.github.io/image/icon2.JPG">
+</head>
 
-  </head>
+<body>
+  <header>
+    <h1>
+      <a href="/">tacky0612.github.io</a>
+    </h1>
+  </header>
 
-  <body>
-    <div class="header">
-      <h1>
-        <a href="https://tacky0612.github.io">tacky0612.github.io</a>
-      </h1>
-    </div>
-
+  <section>
     <div class="contents">
-      <div class="profile">
-        <h1>Profile</h1>
-        <img src="image/icon1.JPG" alt="tacky0612 icon photo"/>
-        <img src="image/icon2.JPG" alt="tacky0612 icon image"/>
+      <div class="profile content">
+        <h2>Profile</h2>
+        <img src="image/icon1.JPG" alt="tacky0612 icon photo" />
+        <img src="image/icon2.JPG" alt="tacky0612 icon image" />
         <p>
           My name is Yu Takitani. (Please call me tacky0612!)</br>
           I’m a software engineer in Tokyo.</br>
           I like sushi.&#x1f363;
         </p>
       </div>
-      <div class="link">
-        <h1>Links</h1>
-        <div class = "links">
+      <div class="links content">
+        <h2>Links</h2>
+        <div class="link">
           <!-- <a target="_blank" href=""><img src="" alt=""></a> -->
-          <a target="_blank" href="https://github.com/tacky0612"><img src="image/GitHub-Mark-120px-plus.png" alt="github"></a>
-          <a target="_blank" href="https://twitter.com/tacky0612"><img src="image/Twitter_Logo_Blue.png" alt="twitter"></a>
-          <a target="_blank" href="https://www.instagram.com/tacky0612"><img src="image/Instagram_AppIcon_Aug2017.png" alt="instagram"></a>
-          <a target="_blank" href="https://www.youtube.com/channel/UC2_GzSBKDFw2enGzea7ZZ2w"><img src="image/yt_icon_rgb.png" alt="youtube"></a>
-          <a target="_blank" href="http://tacky0612.hatenablog.com/"><img src="image/hatena-blog-logo-s.png" alt="hatenablog"></a>
-          <br>
-          <a target="_blank" href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">Amazon wishlist</a>
+          <p class="github"><a href="https://github.com/tacky0612" target="_blank"><i class="fab fa-github"></i></a></p>
+          <p class="twitter"><a href="https://twitter.com/tacky0612" target="_blank"><i class="fab fa-twitter"></i></a>
+          </p>
+
+          <p class="instagram"><span class="insta"><a href="https://instagram.com/tacky0612" target="_blank"><i
+                  class="fab fa-instagram"></i></a></span>
+          </p>
+
+          <p class="youtube"><a href="https://www.youtube.com/channel/UC2_GzSBKDFw2enGzea7ZZ2w" target="_blank"><i
+                class="fab fa-youtube"></i></a></p>
+          <p class="hatena"><a target="_blank" href="http://tacky0612.hatenablog.com/"><img
+                src="image/hatena-blog-logo-s.png" alt="hatenablog"></a>
+          </p>
         </div>
+        <a target="_blank" href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">Amazon wishlist</a>
       </div>
     </div>
-  </body>
+  </section>
+
+  <span class="footer-margin"> </span>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-container">
+        <div class="sns-links">
+          <p class="github"><a href="https://github.com/tacky0612/DynamicBingo/" target="_blank"><i
+                class="fab fa-github"></i></a></p>
+          <p class="twitter"><a href="https://twitter.com/tacky0612" target="_blank"><i class="fab fa-twitter"></i></a>
+          </p>
+        </div>
+        <p>Create by <a href="https://github.com/tacky0612" target="_blank">@tacky0612</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>

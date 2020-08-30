@@ -1,0 +1,241 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  min-width: 700px;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    min-width: inherit;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #BFFFFE;
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+header h1 {
+  padding: 30px;
+  margin: auto;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  width: 600px;
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    width: inherit;
+  }
+}
+
+.contents .content {
+  margin-top: 50px;
+}
+
+.contents h2 {
+  padding-bottom: 8px;
+  font-size: 30px;
+  border-bottom: solid 3px black;
+}
+
+.contents .profile img {
+  width: 250px;
+  margin: 40px 20px;
+  border-radius: 15%;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .profile img {
+    width: 150px;
+  }
+}
+
+.contents .links {
+  text-align: center;
+}
+
+.contents .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 30px;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .link {
+    margin: 40px 20px;
+  }
+}
+
+.contents .link p {
+  margin: auto;
+}
+
+.contents .link img {
+  width: 70px;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .link img {
+    width: 50px;
+  }
+}
+
+.contents .link .github a {
+  text-decoration: none;
+  color: #252a2e;
+  font-size: 70px;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .link .github a {
+    font-size: 50px;
+  }
+}
+
+.contents .link .twitter a {
+  text-decoration: none;
+  color: #55acee;
+  font-size: 70px;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .link .twitter a {
+    font-size: 50px;
+  }
+}
+
+.contents .link .insta {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .link .insta {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+  }
+}
+
+.contents .link .insta:before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: -18px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+}
+
+.contents .link .fa-instagram {
+  color: #FFF;
+  position: relative;
+  z-index: 2;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .link .fa-instagram {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+.contents .link .youtube a {
+  text-decoration: none;
+  color: #ff0000;
+  font-size: 70px;
+}
+
+@media screen and (max-width: 400px) {
+  .contents .link .youtube a {
+    font-size: 50px;
+  }
+}
+
+.footer-margin {
+  margin-top: 50px;
+}
+
+footer {
+  width: 100%;
+  background-color: #dddddd;
+  padding: 0px;
+  margin-top: auto;
+}
+
+footer .footer-inner {
+  max-width: 1000px;
+  margin: auto;
+}
+
+footer .footer-container {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+footer .footer-container p {
+  margin: 10px 20px;
+  margin-left: auto;
+}
+
+footer .footer-container .sns-links {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-container .sns-links .github a {
+  text-decoration: none;
+  color: #252a2e;
+  font-size: 40px;
+}
+
+footer .footer-container .sns-links .twitter a {
+  text-decoration: none;
+  color: #55acee;
+  font-size: 40px;
+}
+/*# sourceMappingURL=index.css.map */
