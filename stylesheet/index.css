@@ -14,7 +14,7 @@ body {
   min-width: 700px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   body {
     min-width: inherit;
   }
@@ -50,7 +50,7 @@ section {
   width: 600px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   section {
     width: inherit;
   }
@@ -73,7 +73,7 @@ section {
   border-radius: 15%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .profile img {
     width: 150px;
     margin: 40px 10px;
@@ -91,7 +91,7 @@ section {
   margin: 40px 30px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .link {
     margin: 40px 20px;
   }
@@ -105,7 +105,7 @@ section {
   width: 70px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .link img {
     width: 50px;
   }
@@ -117,7 +117,7 @@ section {
   font-size: 70px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .link .github a {
     font-size: 50px;
   }
@@ -129,7 +129,7 @@ section {
   font-size: 70px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .link .twitter a {
     font-size: 50px;
   }
@@ -145,7 +145,7 @@ section {
   border-radius: 18px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .link .insta {
     width: 50px;
     height: 50px;
@@ -171,7 +171,7 @@ section {
   line-height: 70px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .link .fa-instagram {
     font-size: 40px;
     line-height: 50px;
@@ -184,7 +184,7 @@ section {
   font-size: 70px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .contents .link .youtube a {
     font-size: 50px;
   }
