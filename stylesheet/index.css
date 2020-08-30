@@ -76,6 +76,7 @@ section {
 @media screen and (max-width: 400px) {
   .contents .profile img {
     width: 150px;
+    margin: 40px 10px;
   }
 }
 
