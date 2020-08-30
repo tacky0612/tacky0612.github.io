@@ -63,7 +63,8 @@ section {
 .contents h2 {
   padding-bottom: 8px;
   font-size: 30px;
-  border-bottom: solid 3px black;
+  border-bottom: dashed 3px black;
+  margin: 0 15px;
 }
 
 .contents .profile img {
