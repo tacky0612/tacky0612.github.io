@@ -80,6 +80,133 @@ section {
   }
 }
 
+.contents .skills {
+  text-align: center;
+  position: relative;
+}
+
+.contents .skills-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.contents .skills-inner .extend {
+  margin: 0 calc(50% - 50vw);
+  width: 80vw;
+}
+
+@media screen and (max-width: 420px) {
+  .contents .skills-inner .extend {
+    width: 100vw;
+  }
+}
+
+.contents .skills h3 {
+  display: flexbox;
+  width: 30%;
+  padding: 20px 40px;
+  margin: 30px auto;
+  background-color: #bbb;
+  border-radius: 20px;
+}
+
+.contents .skills .ul-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+.contents .skills ul {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contents .skills ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin: 20px 10px;
+  background: #eee;
+  -webkit-box-shadow: 0px 0px 5px silver;
+          box-shadow: 0px 0px 5px silver;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+@media screen and (max-width: 420px) {
+  .contents .skills ul li {
+    width: 95vw;
+  }
+}
+
+.contents .skills ul li .list-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 40px;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+@media screen and (max-width: 420px) {
+  .contents .skills ul li .list-head {
+    font-size: 30px;
+  }
+}
+
+.contents .skills ul li .list-head i {
+  width: 0;
+}
+
+.contents .skills ul li .list-head h4 {
+  margin: auto;
+}
+
+.contents .skills ul li .list-body {
+  padding: 20px;
+  height: 100px;
+  text-align: left;
+}
+
 .contents .links {
   text-align: center;
 }
