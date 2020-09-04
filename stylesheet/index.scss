@@ -129,7 +129,7 @@ section {
             // flex-basis: 0px;
             li {
                 display: flex;
-                width: 300px;
+                width: 250px;
 
                 @include mq(sm) {
                     width: 95vw;
