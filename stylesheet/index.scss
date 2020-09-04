@@ -129,7 +129,7 @@ section {
             // flex-basis: 0px;
             li {
                 display: flex;
-                width: 250px;
+                width: 300px;
 
                 @include mq(sm) {
                     width: 95vw;
@@ -330,8 +330,7 @@ footer {
     /*忘れずに！*/
     width: 33px;
     /*画像の幅*/
-    height: 33
-    px;
+    height: 33px;
     /*画像の高さ*/
     background-image: url(../image/ruby.png);
     background-size: contain;
