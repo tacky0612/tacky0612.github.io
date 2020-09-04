@@ -67,6 +67,15 @@ section {
         margin: 0 15px;
     }
 
+    .extend {
+        margin: 0 calc(50% - 50vw);
+        width: 80vw;
+
+        @include mq(sm) {
+            width: 100vw;
+        }
+    }
+
     .profile img {
         width: 250px;
         margin: 40px 20px;
@@ -90,16 +99,8 @@ section {
             text-align: center;
             flex-flow: column;
 
-            .extend {
-                margin: 0 calc(50% - 50vw);
-                width: 80vw;
-
-                @include mq(sm) {
-                    width: 100vw;
-                }
-            }
         }
-        
+
 
         h3 {
             display: flexbox;
@@ -109,27 +110,31 @@ section {
             background-color: #bbb;
             border-radius: 20px;
         }
-        .ul-inner{
+
+        .ul-inner {
             display: flex;
             text-align: center;
-            margin :auto;
+            margin: auto;
         }
 
         ul {
             width: max-content;
             list-style: none;
             display: flex;
-            flex-wrap : wrap;
-            margin:auto;
+            flex-wrap: wrap;
+            margin: auto;
             text-align: center;
-            justify-content: center		;
+            justify-content: center;
+
             // flex-basis: 0px;
             li {
                 display: flex;
-                width: 400px;
+                width: 300px;
+
                 @include mq(sm) {
                     width: 95vw;
                 }
+
                 align-items: center;
                 justify-content: center;
                 text-align: center;
@@ -138,27 +143,32 @@ section {
                 background: #eee;
                 box-shadow: 0px 0px 5px silver;
                 align-items: stretch;
-                &:last-child{
-                }
+
+                &:last-child {}
 
                 .list-head {
                     display: flex;
-                    font-size: 40px;  
+                    font-size: 30px;
+
                     @include mq(sm) {
-                        font-size: 30px;
+                        font-size: 25px;
                     }
+
                     background-color: #ccc;
                     padding:10px;
-                    i{
+
+                    i {
                         width: 0;
+                        font-size: 40px;
                     }
-                    h4{
-                        margin:auto;
+
+                    h4 {
+                        margin: auto;
                     }
                 }
 
-                .list-body{
-                    padding:20px;
+                .list-body {
+                    padding: 20px;
                     height: 100px;
                     text-align: left;
                 }
@@ -173,6 +183,8 @@ section {
 
     .link {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         margin: 40px 30px;
 
         @include mq(sm) {
@@ -180,7 +192,7 @@ section {
         }
 
         p {
-            margin: auto;
+            margin: 20px 20px;
         }
 
         img {
@@ -309,4 +321,20 @@ footer {
             }
         }
     }
+}
+
+.ruby::after {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 33px;
+    /*画像の幅*/
+    height: 33px;
+    /*画像の高さ*/
+    background-image: url(../image/ruby.png);
+    background-size: contain;
+    vertical-align: middle;
+    position: relative;
+    top:-4px;
 }

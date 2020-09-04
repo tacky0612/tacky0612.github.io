@@ -48,7 +48,7 @@
         </p>
       </div>
 
-      <div class="skills content" style="display: none;">
+      <div class="skills content" style="">
         <h2>Skills</h2>
         <div class="skills-inner">
           <div class="extend">
@@ -56,53 +56,64 @@
             <div class="ul-inner">
               <ul>
                 <li>
-                  <div class="list-head">
-                    <i class="fab fa-html5"></i>
-                    <h4>HTML5</h4>
-                  </div>
-                  <div class="list-body">
-                    <p>このページを作成するのに用いました。</p>
-                  </div>
+                  <skill-component skill="HTML5" image="fab fa-html5" text="このサイトを作るのに使いました。"></skill-component>
                 </li>
                 <li>
-                  <div class="list-head">
-                    <i class="fab fa-css3-alt"></i>
-                    <h4>CSS3</h4>
-                  </div>
-                  <div class="list-body">
-                    <p>このページを作成するのに用いました。</p>
-                  </div>
+                  <skill-component skill="CSS3" image="fab fa-css3-alt" text="このサイトを作るのに使いました。"></skill-component>
                 </li>
-                TODO　ここらへんをVueのv-forで書きたい
+                <li>
+                  <skill-component skill="Sass" image="fab fa-sass" text="このサイトを作るのに使いました。"></skill-component>
+                </li>
+                <li>
+                  <skill-component skill="JavaScript" image="fab fa-js-square"></skill-component>
+                </li>
+                <!-- <li>
+                  <skill-component skill="Vue.js" image="fab fa-vuejs"></skill-component>
+                </li> -->
+                <li>
+                  <skill-component skill="C#" image="fas fa-terminal"></skill-component>
+                </li>
+                <li>
+                  <skill-component skill="Python3" image="fab fa-python"></skill-component>
+                </li>
+                <li>
+                  <skill-component skill="Ruby" image="ruby"></skill-component>
+                </li>
               </ul>
             </div>
-          
           </div>
         </div>
       </div>
 
       <div class="links content">
         <h2>Links</h2>
-        <div class="link">
-          <!-- <a target="_blank" href=""><img src="" alt=""></a> -->
-          <p class="github"><a href="https://github.com/tacky0612" target="_blank"><i class="fab fa-github"></i></a></p>
-          <p class="twitter"><a href="https://twitter.com/tacky0612" target="_blank"><i class="fab fa-twitter"></i></a>
-          </p>
+        <div class="skills-inner">
+          <div class="extend">
+            <div class="link">
+              <!-- <a target="_blank" href=""><img src="" alt=""></a> -->
+              <p class="github"><a href="https://github.com/tacky0612" target="_blank"><i class="fab fa-github"></i></a>
+              </p>
+              <p class="twitter"><a href="https://twitter.com/tacky0612" target="_blank"><i
+                    class="fab fa-twitter"></i></a>
+              </p>
 
-          <p class="instagram"><span class="insta"><a href="https://instagram.com/tacky0612" target="_blank"><i
-                  class="fab fa-instagram"></i></a></span>
-          </p>
+              <p class="instagram"><span class="insta"><a href="https://instagram.com/tacky0612" target="_blank"><i
+                      class="fab fa-instagram"></i></a></span>
+              </p>
 
-          <p class="youtube"><a href="https://www.youtube.com/channel/UC2_GzSBKDFw2enGzea7ZZ2w" target="_blank"><i
-                class="fab fa-youtube"></i></a></p>
-          <p class="hatena"><a target="_blank" href="http://tacky0612.hatenablog.com/"><img
-                src="image/hatena-blog-logo-s.png" alt="hatenablog"></a>
-          </p>
-          <p class="hatena"><a target="_blank" href="https://atcoder.jp/users/tacky0612"><img
-                src="image/atcoder-logo.svg" alt="atcoder"></a>
-          </p>
+              <p class="youtube"><a href="https://www.youtube.com/channel/UC2_GzSBKDFw2enGzea7ZZ2w" target="_blank"><i
+                    class="fab fa-youtube"></i></a></p>
+              <p class="hatena"><a target="_blank" href="http://tacky0612.hatenablog.com/"><img
+                    src="image/hatena-blog-logo-s.png" alt="hatenablog"></a>
+              </p>
+              <p class="hatena"><a target="_blank" href="https://atcoder.jp/users/tacky0612"><img
+                    src="image/atcoder-logo.svg" alt="atcoder"></a>
+              </p>
+            </div>
+            <a target="_blank" href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">Amazon
+              wishlist</a>
+          </div>
         </div>
-        <a target="_blank" href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">Amazon wishlist</a>
       </div>
     </div>
   </section>
@@ -121,7 +132,8 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

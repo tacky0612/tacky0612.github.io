@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,6 +68,17 @@ section {
   margin: 0 15px;
 }
 
+.contents .extend {
+  margin: 0 calc(50% - 50vw);
+  width: 80vw;
+}
+
+@media screen and (max-width: 420px) {
+  .contents .extend {
+    width: 100vw;
+  }
+}
+
 .contents .profile img {
   width: 250px;
   margin: 40px 20px;
@@ -100,17 +112,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-}
-
-.contents .skills-inner .extend {
-  margin: 0 calc(50% - 50vw);
-  width: 80vw;
-}
-
-@media screen and (max-width: 420px) {
-  .contents .skills-inner .extend {
-    width: 100vw;
-  }
 }
 
 .contents .skills h3 {
@@ -151,7 +152,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 400px;
+  width: 300px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -182,19 +183,20 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 40px;
+  font-size: 30px;
   background-color: #ccc;
   padding: 10px;
 }
 
 @media screen and (max-width: 420px) {
   .contents .skills ul li .list-head {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
 .contents .skills ul li .list-head i {
   width: 0;
+  font-size: 40px;
 }
 
 .contents .skills ul li .list-head h4 {
@@ -215,6 +217,11 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 40px 30px;
 }
 
@@ -225,7 +232,7 @@ section {
 }
 
 .contents .link p {
-  margin: auto;
+  margin: 20px 20px;
 }
 
 .contents .link img {
@@ -366,5 +373,21 @@ footer .footer-container .sns-links .twitter a {
   text-decoration: none;
   color: #55acee;
   font-size: 40px;
+}
+
+.ruby::after {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 33px;
+  /*画像の幅*/
+  height: 33px;
+  /*画像の高さ*/
+  background-image: url(../image/ruby.png);
+  background-size: contain;
+  vertical-align: middle;
+  position: relative;
+  top: -4px;
 }
 /*# sourceMappingURL=index.css.map */
