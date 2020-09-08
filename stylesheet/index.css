@@ -26,12 +26,7 @@ body {
 }
 
 header {
-  background-color: #BFFFFE;
-  font-weight: bold;
-  font-size: 25px;
   width: 100%;
-  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
-          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
 }
 
 header h1 {
@@ -43,6 +38,13 @@ header a {
   text-decoration: none;
   font-size: medium;
   color: #000;
+}
+
+header .navbar {
+  background-color: #BFFFFE;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  font-weight: bold;
 }
 
 header .navbar-toggler {

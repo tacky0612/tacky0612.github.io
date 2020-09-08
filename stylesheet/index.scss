@@ -31,12 +31,7 @@ body {
 }
 
 header {
-    background-color: #BFFFFE;
-    font-weight: bold;
-    font-size: 25px;
     width: 100%;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
-
     h1 {
         padding: 30px;
         margin: auto;
@@ -47,7 +42,11 @@ header {
         font-size: medium;
         color: #000;
     }
-
+    .navbar{
+        background-color: #BFFFFE;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+        font-weight: bold;
+    }
     .navbar-toggler {
         border-color: #aaa;
 
