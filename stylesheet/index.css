@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,13 +26,6 @@ body {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #BFFFFE;
   font-weight: bold;
   font-size: 25px;
@@ -42,9 +39,14 @@ header h1 {
   margin: auto;
 }
 
-header h1 a {
+header a {
   text-decoration: none;
+  font-size: medium;
   color: #000;
+}
+
+header .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 section {
@@ -66,6 +68,7 @@ section {
   font-size: 30px;
   border-bottom: dashed 3px black;
   margin: 0 15px;
+  text-align: center;
 }
 
 .contents .extend {
@@ -115,12 +118,17 @@ section {
 }
 
 .contents .skills h3 {
-  display: flexbox;
-  width: 30%;
   padding: 20px 40px;
   margin: 30px auto;
   background-color: #bbb;
   border-radius: 20px;
+  width: 500px;
+}
+
+@media screen and (max-width: 420px) {
+  .contents .skills h3 {
+    width: 80vw;
+  }
 }
 
 .contents .skills .ul-inner {
@@ -222,6 +230,9 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 40px 30px;
 }
 
