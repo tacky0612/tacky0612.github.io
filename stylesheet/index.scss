@@ -32,6 +32,7 @@ body {
 
 header {
     width: 100%;
+
     h1 {
         padding: 30px;
         margin: auto;
@@ -42,11 +43,13 @@ header {
         font-size: medium;
         color: #000;
     }
-    .navbar{
+
+    .navbar {
         background-color: #BFFFFE;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
         font-weight: bold;
     }
+
     .navbar-toggler {
         border-color: #aaa;
 
@@ -339,18 +342,22 @@ footer {
     }
 }
 
-.ruby::after {
-    content: '';
-    /*何も入れない*/
-    display: inline-block;
-    /*忘れずに！*/
-    width: 33px;
-    /*画像の幅*/
-    height: 33px;
-    /*画像の高さ*/
-    background-image: url(../image/ruby.png);
-    background-size: contain;
-    vertical-align: middle;
-    position: relative;
-    top: -4px;
+.ruby {
+height: 40px;
+    &::after {
+        content: '';
+        /*何も入れない*/
+        display: inline-block;
+        /*忘れずに！*/
+        width: 33px;
+        /*画像の幅*/
+        height: 33px;
+        /*画像の高さ*/
+        background-image: url(../image/ruby.png);
+        background-size: contain;
+        vertical-align: middle;
+        position: relative;
+        margin: 0px;
+        top: -14px;
+    }
 }

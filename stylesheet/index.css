@@ -393,6 +393,10 @@ footer .footer-container .sns-links .twitter a {
   font-size: 40px;
 }
 
+.ruby {
+  height: 40px;
+}
+
 .ruby::after {
   content: '';
   /*何も入れない*/
@@ -406,6 +410,7 @@ footer .footer-container .sns-links .twitter a {
   background-size: contain;
   vertical-align: middle;
   position: relative;
-  top: -4px;
+  margin: 0px;
+  top: -14px;
 }
 /*# sourceMappingURL=index.css.map */
