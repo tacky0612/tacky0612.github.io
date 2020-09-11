@@ -1,17 +1,17 @@
-(function() {
+(function () {
     'use strict';
 
     var skillComponent = Vue.extend({
-        props:{
-            skill:{
+        props: {
+            skill: {
                 type: String,
                 default: "None"
             },
-            image:{
+            image: {
                 type: String,
                 default: "fas fa-angle-down"
             },
-            text:{
+            text: {
                 type: String,
                 default: "ちょっとだけ"
             }
@@ -31,15 +31,21 @@
     var app = new Vue({
         el: ".contents",
         components: {
-            'skill-component':skillComponent
+            'skill-component': skillComponent
         },
         data: {
-            total:0
+            total: 0
         }
     });
-    
+
 })();
 
-$('.navbar-nav>li>a').on('click', function(){
-      $('.navbar-collapse').collapse('hide');
+$('.navbar-nav>li>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+});
+
+$(document).ready(function () {
+    $(".skills button").click(function (event) {
+        $(this).next().slideToggle(500);
+    });
 });
