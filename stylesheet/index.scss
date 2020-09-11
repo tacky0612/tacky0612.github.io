@@ -343,7 +343,8 @@ footer {
 }
 
 .ruby {
-height: 40px;
+    height: 40px;
+
     &::after {
         content: '';
         /*何も入れない*/
