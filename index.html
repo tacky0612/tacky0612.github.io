@@ -3,170 +3,188 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Profile | tacky0612</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="stylesheet/reset.css">
-  <link rel="stylesheet" href="stylesheet/index.css">
-  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="icon" href="image/favicon.ico" />
+    <meta charset="utf-8">
+    <title>Profile | tacky0612</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="stylesheet/reset.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/index.min.css">
+    <link rel="icon" href="image/favicon.ico" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- SNS設定 -->
+    <meta property="og:title" content="Profile | tacky0612" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tacky0612.github.io" />
+    <meta property="og:image" content="https://tacky0612.github.io/image/icon1.JPG" />
+    <meta property="og:description" content="tacky0612 Profile" />
 
-  <!-- SNS設定 -->
-  <meta property="og:title" content="Profile | tacky0612" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tacky0612.github.io" />
-  <meta property="og:image" content="https://tacky0612.github.io/image/icon1.JPG" />
-  <meta property="og:description" content="tacky0612 Profile" />
-
-  <!-- Twitter設定 -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@tacky0612">
-  <meta name="twitter:creator" content="@tacky0612" />
-  <meta name="twitter:title" content="Profile | tacky0612">
-  <meta name="twitter:description"
-    content="My name is Yu Takitani. (Please call me tacky0612!) I’m a software engineer in Tokyo.">
-  <meta name="twitter:image" content="https://tacky0612.github.io/image/icon2.JPG">
+    <!-- Twitter設定 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tacky0612">
+    <meta name="twitter:creator" content="@tacky0612" />
+    <meta name="twitter:title" content="Profile | tacky0612">
+    <meta name="twitter:description"
+        content="My name is Yu Takitani. (Please call me tacky0612!) I’m a software engineer in Tokyo.">
+    <meta name="twitter:image" content="https://tacky0612.github.io/image/icon2.JPG">
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="/">tacky0612.github.io</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
-          aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbars">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#profile">Profile</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#links">Links</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <section>
-    <div class="contents">
-      <div class="profile content" id="profile">
-        <h2>Profile</h2>
-        <img src="image/icon1.JPG" alt="tacky0612 icon photo" />
-        <img src="image/icon2.JPG" alt="tacky0612 icon image" />
-        <p>
-          My name is Yu Takitani. (Please call me tacky0612!)</br>
-          I’m a software engineer in Tokyo.</br>
-          I like sushi.&#x1f363;
-        </p>
-      </div>
-
-      <div class="skills content" id="skills">
-        <h2>Skills</h2>
-        <div class="skills-inner">
-          <div class="extend">
-            <button class="btn btn-primary my-4 btn-lg" type="button">
-              Programming Language
-            </button>
-            <div class="ul-inner jumbotron bg-gradient-primary" id="programingLanguage" style="display: none;">
-              <ul>
-                <li>
-                  <skill-component skill="HTML5" image="fab fa-html5" text="このサイトを作るのに使いました。"></skill-component>
-                </li>
-                <li>
-                  <skill-component skill="CSS3" image="fab fa-css3-alt" text="このサイトを作るのに使いました。"></skill-component>
-                </li>
-                <li>
-                  <skill-component skill="Sass" image="fab fa-sass" text="このサイトを作るのに使いました。"></skill-component>
-                </li>
-                <li>
-                  <skill-component skill="JavaScript" image="fab fa-js-square"></skill-component>
-                </li>
-                <li>
-                  <skill-component skill="C#" image="fas fa-terminal"></skill-component>
-                </li>
-                <li>
-                  <skill-component skill="Python3" image="fab fa-python"></skill-component>
-                </li>
-                <li>
-                  <skill-component skill="Ruby" image="ruby"></skill-component>
-                </li>
-              </ul>
+    <header class="vw-100">
+        <nav class="navbar navbar-expand-lg fixed-top fw-bold">
+            <div class="container-fluid mx-sm-5">
+                <h1 class="d-flex align-items-center m-0">
+                    <a class="navbar-brand fw-bold text-dark" href="/">tacky0612.github.io</a>
+                </h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+                    aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon position-relative">
+                        <i class="fas fa-bars position-absolute top-50 start-50 translate-middle"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbars">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-end me-3 me-sm-auto text-dark" href="#profile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-end me-3 me-sm-auto text-dark" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-end me-3 me-sm-auto text-dark" href="#links">Links</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+        </nav>
+    </header>
 
-      <div class="links content" id="links">
-        <h2>Links</h2>
-        <div class="skills-inner">
-          <div class="extend">
-            <div class="link">
-              <!-- <a target="_blank" href=""><img src="" alt=""></a> -->
-              <p class="github"><a href="https://github.com/tacky0612" target="_blank"><i class="fab fa-github"></i></a>
-              </p>
-              <p class="twitter"><a href="https://twitter.com/tacky0612" target="_blank"><i
-                    class="fab fa-twitter"></i></a>
-              </p>
+    <main class="container py-5">
+        <article class="mx-auto">
+            <section class="border-radius-40 d-flex alert alert-secondary padding-for-header my-5" id="profile">
+                <div class="mx-auto">
+                    <h2 class="contents-title">Profile</h2>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img class="profile-image border-radius-40" src="image/icon1.JPG" alt="tacky0612 icon photo" />
+                        <img class="profile-image border-radius-40" src="image/icon2.JPG" alt="tacky0612 icon image" />
+                    </div>
+                    <p class="mx-3 text-center">
+                        My name is Yu Takitani. (Please call me tacky0612!)</br>
+                        I’m a software engineer in Tokyo.</br>
+                        I like sushi.&#x1f363;
+                    </p>
+                </div>
+            </section>
 
-              <p class="instagram"><span class="insta"><a href="https://instagram.com/tacky0612" target="_blank"><i
-                      class="fab fa-instagram"></i></a></span>
-              </p>
+            <section class="border-radius-40 d-flex alert alert-secondary  padding-for-header my-5" id="skills">
+                <div class="mx-auto">
+                    <h2 class="contents-title">Skills</h2>
+                    <div class="skills-wrapper">
+                        <div class="d-flex">
+                            <button class="button btn btn-primary btn-lg my-4 mx-auto" type="button">
+                                Programming Language
+                            </button>
+                        </div>
+                        <div class="skills alert alert-primary display-none" id="programingLanguage">
+                            <ul class="p-0 m-0 d-inline-flex flex-wrap justify-content-evenly align-items-stretch">
+                                <skill-component skill="HTML" image="fas fa-code" v-bind:items=["WEBページの制作ができます"]
+                                    background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="CSS3" image="fab fa-css3" v-bind:items=["WEBページの制作ができます"]
+                                    background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="Sass" image="fab fa-sass" v-bind:items=["プログラマラブルにスタイルを記述"]
+                                    background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="JavaScript" image="fab fa-js-square"
+                                    v-bind:items=["WEBページのコンテンツを動的に更新したりします"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="Vue.js" image="fab fa-vuejs" background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="C#" image="fas fa-server"
+                                    v-bind:items=["サーバーサイドの開発","実務でよく使ってます"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="Python3" image="fab fa-python"
+                                    v-bind:items=["大学院での研究に使用","競技プログラミングで使用"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="Ruby" image="fas fa-gem" background-color="bg-primary">
+                                </skill-component>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-              <p class="youtube"><a href="https://www.youtube.com/channel/UC2_GzSBKDFw2enGzea7ZZ2w" target="_blank"><i
-                    class="fab fa-youtube"></i></a></p>
-              <p class="hatena"><a target="_blank" href="http://tacky0612.hatenablog.com/"><img
-                    src="image/hatena-blog-logo-s.png" alt="hatenablog"></a>
-              </p>
-              <p class="hatena"><a target="_blank" href="https://atcoder.jp/users/tacky0612"><img
-                    src="image/atcoder-logo.svg" alt="atcoder"></a>
-              </p>
+            <section class="border-radius-40 d-flex alert alert-secondary padding-for-header my-5" id="links">
+                <div class="mx-auto">
+                    <h2 class="contents-title">Links</h2>
+
+                    <div class="border-radius-40 alert alert-light m-0 m-sm-3">
+                        <div class="d-flex align-content-center justify-content-evenly justify-content-sm-center flex-wrap m-3 p-sm-3 m-sm-0">
+                            <!-- <a target="_blank" href=""><img src="" alt=""></a> -->
+                            <a class="github-icon links-icon text-center" href="https://github.com/tacky0612"
+                                target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a class="twitter-icon links-icon text-center" href="https://twitter.com/tacky0612"
+                                target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="instagram-icon links-icon text-center" href="https://instagram.com/tacky0612"
+                                target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="youtube-icon links-icon text-center"
+                                href="https://www.youtube.com/channel/UC2_GzSBKDFw2enGzea7ZZ2w" target="_blank">
+                                <i class="fab fa-youtube"></i></a>
+                            <a class="hatena-icon links-icon text-center" target="_blank"
+                                href="http://tacky0612.hatenablog.com/">
+                                <img src="image/hatena-blog-logo-s.png" alt="hatenablog">
+                            </a>
+                            <a class="atcoder-icon links-icon text-center" target="_blank"
+                                href="https://atcoder.jp/users/tacky0612">
+                                <img src="image/atcoder-logo.svg" alt="atcoder">
+                            </a>
+                        </div>
+                        <a class="d-flex justify-content-center my-3" target="_blank"
+                            href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">Amazon
+                            wishlist</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-container">
+                <div class="sns-links">
+                    <p class="github"><a href="https://github.com/tacky0612" target="_blank"><i
+                                class="fab fa-github"></i></a></p>
+                    <p class="twitter"><a href="https://twitter.com/tacky0612" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                    </p>
+                </div>
+                <p>Create by <a href="https://github.com/tacky0612" target="_blank">@tacky0612</a></p>
             </div>
-            <a target="_blank" href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">Amazon
-              wishlist</a>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <span class="footer-margin"> </span>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-container">
-        <div class="sns-links">
-          <p class="github"><a href="https://github.com/tacky0612" target="_blank"><i class="fab fa-github"></i></a></p>
-          <p class="twitter"><a href="https://twitter.com/tacky0612" target="_blank"><i class="fab fa-twitter"></i></a>
-          </p>
-        </div>
-        <p>Create by <a href="https://github.com/tacky0612" target="_blank">@tacky0612</a></p>
-      </div>
-    </div>
-  </footer>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/main.js"></script>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

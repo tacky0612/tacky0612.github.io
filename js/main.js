@@ -9,27 +9,41 @@
             },
             image: {
                 type: String,
-                default: "fas fa-angle-down"
+                default: "far fa-circle"
             },
-            text: {
+            items: {
+                type: Array,
+                default: () => ["ちょっとだけ"]
+            },
+            backgroundColor:{
                 type: String,
-                default: "ちょっとだけ"
+                default: "bg-dark"
+            },
+            textColor:{
+                type: String,
+                default: "text-white"
             }
         },
 
-        template: '\
-        <div>\
-            <div class="list-head">\
-                <i v-bind:class= image ></i><h4>{{ skill }}</h4>\
+        template: 
+        '<li class="m-2 skills-item">\
+            <div class="card h-100">\
+                <div class="card-header" v-bind:class="[backgroundColor, textColor]">\
+                    <i v-bind:class= image class="me-3"></i>{{ skill }}\
+                </div>\
+                <div class="card-body">\
+                    <ul class="p-0">\
+                        <li v-for="item in items">\
+                            {{item}}\
+                        </li>\
+                    </ul>\
+                </div>\
             </div>\
-            <div class="list-body">\
-                <p>{{ text}}</p>\
-            </div>\
-        </div>'
+        </li>'
     });
 
     var app = new Vue({
-        el: ".contents",
+        el: "main",
         components: {
             'skill-component': skillComponent
         },
@@ -45,7 +59,20 @@ $('.navbar-nav>li>a').on('click', function () {
 });
 
 $(document).ready(function () {
-    $(".skills button").click(function (event) {
-        $(this).next().slideToggle(500);
+    $('.button').click(function (event) {
+        $(this).parents('.skills-wrapper').find('.skills').slideToggle(500);
+    });
+});
+
+$(function () {
+    var headerHight = 80;
+    $('a[href^="#"]').click(function () {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top - headerHight;
+        $("html, body").animate({
+            scrollTop: position
+        }, 100, "swing");
+        return false;
     });
 });
