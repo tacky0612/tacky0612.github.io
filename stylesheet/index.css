@@ -163,3 +163,7 @@ footer .footer-container .sns-links .twitter a {
   color: #55acee;
   font-size: 40px;
 }
+
+.fa-bootstrap::before {
+  content: "\f836";
+}
