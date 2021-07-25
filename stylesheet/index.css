@@ -50,7 +50,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .skills-item {
     flex-basis: 45%;
     max-width: 45%;
@@ -78,10 +78,18 @@ html {
   height: 70px;
 }
 
+@media screen and (max-width: 768px) {
+  .links-icon {
+    margin: 15px;
+    width: 20%;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .links-icon {
     font-size: 50px;
     margin: 10px;
+    width: 20%;
   }
   .links-icon img {
     height: 50px;

@@ -1,6 +1,6 @@
 $breakpoints: ('sm': 'screen and (max-width: 420px)',
     'md': 'screen and (max-width: 768px)',
-    'lg': 'screen and (max-width: 1200px)',
+    'lg': 'screen and (max-width: 1100px)',
     'xl': 'screen and (max-width: 1400px)',
 ) !default;
 
@@ -84,9 +84,15 @@ html {
         height: $link-font-size;
     }
 
+    @include mq(md) {
+        margin: 15px;
+        width: 20%;
+    }
+
     @include mq(sm) {
         font-size: $link-font-size-mobile;
         margin: 10px;
+        width: 20%;
 
         img{
             height: $link-font-size-mobile;

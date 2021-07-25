@@ -36,7 +36,7 @@
 
 <body>
     <header class="vw-100">
-        <nav class="navbar navbar-expand-lg fixed-top fw-bold">
+        <nav class="navbar navbar-expand-md fixed-top fw-bold">
             <div class="container-fluid mx-sm-5">
                 <h1 class="d-flex align-items-center m-0">
                     <a class="navbar-brand fw-bold text-dark" href="/">tacky0612.github.io</a>
@@ -101,8 +101,8 @@
                                 <skill-component skill="Sass" image="fab fa-sass" v-bind:items=["プログラマラブルにスタイルを記述"]
                                     background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="Bootstrap" image="fab fa-bootstrap" v-bind:items=["レスポンシブなWEBデザイン"]
-                                    background-color="bg-primary">
+                                <skill-component skill="Bootstrap" image="fab fa-bootstrap"
+                                    v-bind:items=["レスポンシブなWEBデザイン"] background-color="bg-primary">
                                 </skill-component>
                                 <skill-component skill="JavaScript" image="fab fa-js-square"
                                     v-bind:items=["WEBページのコンテンツを動的に更新したりします"] background-color="bg-primary">
@@ -120,6 +120,45 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="skills-wrapper">
+                        <div class="d-flex">
+                            <button class="button btn btn-success btn-lg my-4 mx-auto" type="button">
+                                Certification / Licence
+                            </button>
+                        </div>
+                        <div class="skills alert alert-success display-none" id="programingLanguage">
+                            <ul class="p-0 m-0 d-inline-flex flex-wrap justify-content-evenly align-items-stretch">
+                                <skill-component skill="ITパスポート試験" image="fas fa-info-circle"
+                                    v-bind:items=["2015年10月-合格"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="基本情報技術者試験(FE)" image="fas fa-user-alt"
+                                    v-bind:items=["2018年4月-合格"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="応用情報技術者試験(AP)" image="fas fa-user-alt"
+                                    v-bind:items=["2021年4月−合格"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="TOEIC" image="fas fa-language"
+                                    v-bind:items=["2019年3月受験","Score:555"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="機械設計技術者試験" image="fas fa-wrench"
+                                    v-bind:items=["2016年11月−合格","3級"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="2次元CAD利用技術者試験" image="fas fa-ruler-combined"
+                                    v-bind:items=["2015年11月−合格","2級"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="3次元CAD利用技術者試験" image="fas fa-cubes"
+                                    v-bind:items=["2016年12月−合格","準1級"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="普通自動車免許" image="fas fa-car-side" v-bind:items=["サンデードライバー"]
+                                    background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="普通二輪免許" image="fas fa-motorcycle" v-bind:items=["稀にツーリング"]
+                                    background-color="bg-success">
+                                </skill-component>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -128,8 +167,8 @@
                     <h2 class="contents-title">Links</h2>
 
                     <div class="border-radius-40 alert alert-light m-0 m-sm-3">
-                        <div class="d-flex align-content-center justify-content-evenly justify-content-sm-center flex-wrap m-3 p-sm-3 m-sm-0">
-                            <!-- <a target="_blank" href=""><img src="" alt=""></a> -->
+                        <div
+                            class="d-flex align-content-center justify-content-evenly justify-content-sm-center flex-wrap m-3 p-sm-3 m-sm-0">
                             <a class="github-icon links-icon text-center" href="https://github.com/tacky0612"
                                 target="_blank">
                                 <i class="fab fa-github"></i>
@@ -154,9 +193,11 @@
                                 <img src="image/atcoder-logo.svg" alt="atcoder">
                             </a>
                         </div>
-                        <a class="d-flex justify-content-center my-3" target="_blank"
-                            href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">Amazon
-                            wishlist</a>
+                        <div class="d-flex justify-content-center my-3">
+                            <a target="_blank" href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">
+                                Amazon wishlist
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
