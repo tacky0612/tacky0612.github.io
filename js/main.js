@@ -5,11 +5,15 @@
         props: {
             skill: {
                 type: String,
-                default: "None"
+                default: null
             },
-            image: {
+            icon: {
                 type: String,
-                default: "far fa-circle"
+                default: null
+            },
+            imageLink: {
+                type: String,
+                default: null
             },
             items: {
                 type: Array,
@@ -29,7 +33,9 @@
         '<li class="m-2 skills-item">\
             <div class="card h-100">\
                 <div class="card-header" v-bind:class="[backgroundColor, textColor]">\
-                    <i v-bind:class= image class="me-3"></i>{{ skill }}\
+                    <i v-if="icon" v-bind:class="icon" class="me-3"></i>\
+                    <img v-if="imageLink" v-bind:src="imageLink" class="me-3 skills-image">\
+                    {{ skill }}\
                 </div>\
                 <div class="card-body">\
                     <ul class="p-0">\

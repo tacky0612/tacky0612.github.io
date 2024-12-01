@@ -78,6 +78,11 @@ html {
     }
 }
 
+.skills-image {
+    height: 18px;
+    filter: brightness(0) invert(1); // 画像を白塗りにするフィルター
+}
+
 .links-icon{
     text-decoration: none;
     font-size: $link-font-size;

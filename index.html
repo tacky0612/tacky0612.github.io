@@ -87,40 +87,56 @@
                     <div class="skills-wrapper">
                         <div class="d-flex">
                             <button class="button btn btn-primary btn-lg my-4 mx-auto" type="button">
-                                Programming Language
+                                Programming Language / Flamework / Skill
                             </button>
                         </div>
                         <div class="skills alert alert-primary display-none" id="programingLanguage">
                             <ul class="p-0 m-0 d-inline-flex flex-wrap justify-content-evenly align-items-stretch">
-                                <skill-component skill="HTML" image="fas fa-code" v-bind:items=["WEBページの制作ができます"]
+                                <skill-component skill="HTML" icon="fas fa-code" v-bind:items=["WEBページの制作ができます"]
                                     background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="CSS3" image="fab fa-css3" v-bind:items=["WEBページの制作ができます"]
+                                <skill-component skill="CSS3" icon="fab fa-css3" v-bind:items=["WEBページの制作ができます"]
                                     background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="Sass" image="fab fa-sass" v-bind:items=["プログラマラブルにスタイルを記述"]
+                                <skill-component skill="Sass" icon="fab fa-sass" v-bind:items=["プログラマラブルにスタイルを記述"]
                                     background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="Bootstrap" image="fab fa-bootstrap"
-                                    v-bind:items=["レスポンシブなWEBデザイン"] background-color="bg-primary">
+                                <skill-component skill="Bootstrap" icon="fab fa-bootstrap"
+                                    v-bind:items=["趣味程度です。このサイトはBootstrapを利用しています。"] background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="JavaScript" image="fab fa-js-square"
-                                    v-bind:items=["WEBページのコンテンツを動的に更新したりします"] background-color="bg-primary">
+                                <skill-component skill="JavaScript / TypeScript" icon="fab fa-js-square"
+                                    v-bind:items=["2022年から実務利用","画面"] background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="Vue.js" image="fab fa-vuejs" background-color="bg-primary">
+                                <skill-component skill="Vue.js" icon="fab fa-vuejs" 
+                                    v-bind:items=["趣味程度です。このサイトはVueで作られています。"] background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="C#" image="fas fa-server"
-                                    v-bind:items=["サーバーサイドの開発","実務でよく使ってます"] background-color="bg-primary">
+                                <skill-component skill="React" icon="fa-brands fa-react" 
+                                    v-bind:items=["2024年から実務利用","コンポーネントベースの画面開発"] background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="Python3" image="fab fa-python"
-                                    v-bind:items=["大学院での研究に使用","競技プログラミングで使用"] background-color="bg-primary">
+                                <skill-component skill="C#" icon="fas fa-server"
+                                    v-bind:items=["2020年から実務利用","サーバーサイドの開発"] background-color="bg-primary">
                                 </skill-component>
-                                <skill-component skill="Ruby" image="fas fa-gem" background-color="bg-primary">
+                                <skill-component skill=".NET" image-link="image/NET-core.png"
+                                    v-bind:items=["2020年から実務利用","サーバーサイドの開発"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="SQL" icon="fa-solid fa-database"
+                                    v-bind:items=["2020年から実務利用","対象データを取得するクエリの発行など"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="AWS" icon="fa-brands fa-aws"
+                                    v-bind:items=["2023年から実務利用","アプリケーションサーバーのインフラ構築など"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="Terraform" image-link="image/HashiCorpTerraform.png"
+                                    v-bind:items=["2023年から実務利用","インフラの構成管理"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="GitHub Enterprise" icon="fa-brands fa-github"
+                                    v-bind:items=["2022年から実務利用","OrganizationOwnerとして組織管理"] background-color="bg-primary">
+                                </skill-component>
+                                <skill-component skill="Python3" icon="fab fa-python"
+                                    v-bind:items=["大学院での研究に使用","競技プログラミングで使用"] background-color="bg-primary">
                                 </skill-component>
                             </ul>
                         </div>
                     </div>
-
                     <div class="skills-wrapper">
                         <div class="d-flex">
                             <button class="button btn btn-success btn-lg my-4 mx-auto" type="button">
@@ -129,31 +145,34 @@
                         </div>
                         <div class="skills alert alert-success display-none" id="programingLanguage">
                             <ul class="p-0 m-0 d-inline-flex flex-wrap justify-content-evenly align-items-stretch">
-                                <skill-component skill="ITパスポート試験" image="fas fa-info-circle"
+                                <skill-component skill="ITパスポート試験" icon="fas fa-info-circle"
                                     v-bind:items=["2015年10月-合格"] background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="基本情報技術者試験(FE)" image="fas fa-user-alt"
+                                <skill-component skill="基本情報技術者試験(FE)" icon="fas fa-user-alt"
                                     v-bind:items=["2018年4月-合格"] background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="応用情報技術者試験(AP)" image="fas fa-user-alt"
+                                <skill-component skill="応用情報技術者試験(AP)" icon="fas fa-user-alt"
                                     v-bind:items=["2021年4月−合格"] background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="TOEIC" image="fas fa-language"
+                                <skill-component skill="AWS SAA-C03" icon="fa-brands fa-aws"
+                                    v-bind:items=["2024年12月−合格","AWS認定ソリューションアーキテクト-アソシエイト"] background-color="bg-success">
+                                </skill-component>
+                                <skill-component skill="TOEIC" icon="fas fa-language"
                                     v-bind:items=["2019年3月受験","Score:555"] background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="機械設計技術者試験" image="fas fa-wrench"
+                                <skill-component skill="機械設計技術者試験" icon="fas fa-wrench"
                                     v-bind:items=["2016年11月−合格","3級"] background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="2次元CAD利用技術者試験" image="fas fa-ruler-combined"
+                                <skill-component skill="2次元CAD利用技術者試験" icon="fas fa-ruler-combined"
                                     v-bind:items=["2015年11月−合格","2級"] background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="3次元CAD利用技術者試験" image="fas fa-cubes"
+                                <skill-component skill="3次元CAD利用技術者試験" icon="fas fa-cubes"
                                     v-bind:items=["2016年12月−合格","準1級"] background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="普通自動車免許" image="fas fa-car-side" v-bind:items=["サンデードライバー"]
+                                <skill-component skill="普通自動車免許" icon="fas fa-car-side" v-bind:items=["サンデードライバー"]
                                     background-color="bg-success">
                                 </skill-component>
-                                <skill-component skill="普通二輪免許" image="fas fa-motorcycle" v-bind:items=["稀にツーリング"]
+                                <skill-component skill="普通二輪免許" icon="fas fa-motorcycle" v-bind:items=["稀にツーリング"]
                                     background-color="bg-success">
                                 </skill-component>
                             </ul>
@@ -191,11 +210,6 @@
                             <a class="atcoder-icon links-icon text-center" target="_blank"
                                 href="https://atcoder.jp/users/tacky0612">
                                 <img src="image/atcoder-logo.svg" alt="atcoder">
-                            </a>
-                        </div>
-                        <div class="d-flex justify-content-center my-3">
-                            <a target="_blank" href="https://www.amazon.jp/hz/wishlist/ls/3FZ6NEN1NP0R4?ref_=wl_share">
-                                Amazon wishlist
                             </a>
                         </div>
                     </div>
