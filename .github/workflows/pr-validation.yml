@@ -1,0 +1,116 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run ESLint
+        run: npm run lint
+      
+      - name: Check TypeScript types
+        run: npx tsc --noEmit
+      
+      - name: Build application
+        run: npm run build:app
+      
+      - name: Build Storybook
+        run: npm run build:storybook
+
+  format-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check code formatting
+        run: |
+          npx prettier --check "src/**/*.{js,jsx,ts,tsx,css,md,json}" || echo "::warning::Code formatting issues detected. Run 'npx prettier --write' to fix."
+      
+      - name: Check for console statements
+        run: |
+          ! grep -r "console\.\(log\|error\|warn\|info\|debug\)" src/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" || echo "::warning::Console statements found in source code"
+
+  dependency-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Check for security vulnerabilities
+        run: npm audit --audit-level=high
+        continue-on-error: true
+      
+      - name: Check for outdated dependencies
+        run: npm outdated || true
+
+  summary:
+    needs: [validate, format-check, dependency-check]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: PR validation summary
+        run: |
+          echo "## PR Validation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ needs.validate.result }}" == "success" ]; then
+            echo "✅ **Build and Lint**: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Build and Lint**: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.format-check.result }}" == "success" ]; then
+            echo "✅ **Format Check**: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ **Format Check**: Has warnings" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.dependency-check.result }}" == "success" ]; then
+            echo "✅ **Dependency Check**: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ **Dependency Check**: Has warnings" >> $GITHUB_STEP_SUMMARY
+          fi
