@@ -65,6 +65,10 @@ export const LongText: Story = {
 };
 
 export const InParagraph: Story = {
+  args: {
+    href: '#',
+    children: 'Link',
+  },
   render: () => (
     <p className="text-gray-700 max-w-md">
       Check out my projects on{' '}

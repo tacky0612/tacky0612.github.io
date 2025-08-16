@@ -80,6 +80,9 @@ export const Containerized: Story = {
 };
 
 export const MultipleSections: Story = {
+  args: {
+    children: null,
+  },
   render: () => (
     <>
       <Section id="section1" padding="md" className="bg-gray-50">
