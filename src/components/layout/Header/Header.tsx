@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Button } from '../../ui/Button/Button';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,9 @@ const Header: React.FC = () => {
             </Link>
           </h1>
 
-          <button onClick={toggleMenu} className="md:hidden p-2">
+          <Button onClick={toggleMenu} variant="ghost" size="sm" className="md:hidden !p-2">
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
+          </Button>
 
           <div
             className={`md:flex md:items-center md:space-x-8 ${isOpen ? 'block' : 'hidden'} absolute md:relative top-16 md:top-0 left-0 right-0 bg-white md:bg-transparent shadow-md md:shadow-none`}

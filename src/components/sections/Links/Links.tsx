@@ -1,9 +1,11 @@
 import { FaGithub, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { SectionBackground } from '../../ui/SectionBackground/SectionBackground';
+import { Section } from '../../ui/Section/Section';
 
 const Links: React.FC = () => {
   return (
-    <section id="links" className="py-16 scroll-mt-20">
-      <div className="bg-gray-100 rounded-3xl p-8 max-w-4xl mx-auto">
+    <Section id="links">
+      <SectionBackground>
         <h2 className="text-3xl font-bold text-center mb-8">Links</h2>
 
         <div className="bg-gray-50 rounded-3xl p-6">
@@ -58,8 +60,8 @@ const Links: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </SectionBackground>
+    </Section>
   );
 };
 

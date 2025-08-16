@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Skills from './index';
+import Skills from './Skills';
 
 const meta = {
   title: 'Sections/Skills',
