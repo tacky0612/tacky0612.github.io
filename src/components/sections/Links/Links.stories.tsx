@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Links from './index';
+import Links from './Links';
 
 const meta = {
   title: 'Sections/Links',

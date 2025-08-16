@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import SkillCard from './SkillCard';
+import { Card } from '../../ui/Card/Card';
+import { Button } from '../../ui/Button/Button';
+import { Section } from '../../ui/Section/Section';
 import {
   FaCode,
   FaCss3,
@@ -113,31 +115,35 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 scroll-mt-20">
+    <Section id="skills">
       <div className="bg-gray-100 rounded-3xl p-8 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Skills</h2>
 
         <div className="mb-8">
           <div className="flex justify-center mb-4">
-            <button
+            <Button
               onClick={() => setShowProgramming(!showProgramming)}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors"
+              variant="primary"
+              size="lg"
             >
               Programming Language / Framework / Skill
-            </button>
+            </Button>
           </div>
           {showProgramming && (
             <div className="bg-blue-50 p-6 rounded-lg">
               <ul className="flex flex-wrap justify-center">
                 {programmingSkills.map((skill, index) => (
-                  <SkillCard
-                    key={index}
-                    skill={skill.skill}
-                    icon={skill.icon}
-                    imageLink={skill.imageLink}
-                    items={skill.items}
-                    bgColor="bg-blue-600"
-                  />
+                  <li key={index} className="m-2 w-64">
+                    <Card
+                      title={skill.skill}
+                      icon={skill.icon}
+                      imageUrl={skill.imageLink}
+                      items={skill.items}
+                      headerBgColor="bg-blue-600"
+                      headerTextColor="text-white"
+                      variant="skill"
+                    />
+                  </li>
                 ))}
               </ul>
             </div>
@@ -146,31 +152,35 @@ const Skills: React.FC = () => {
 
         <div>
           <div className="flex justify-center mb-4">
-            <button
+            <Button
               onClick={() => setShowCertifications(!showCertifications)}
-              className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors"
+              variant="success"
+              size="lg"
             >
               Certification / Licence
-            </button>
+            </Button>
           </div>
           {showCertifications && (
             <div className="bg-green-50 p-6 rounded-lg">
               <ul className="flex flex-wrap justify-center">
                 {certifications.map((cert, index) => (
-                  <SkillCard
-                    key={index}
-                    skill={cert.skill}
-                    icon={cert.icon}
-                    items={cert.items}
-                    bgColor="bg-green-600"
-                  />
+                  <li key={index} className="m-2 w-64">
+                    <Card
+                      title={cert.skill}
+                      icon={cert.icon}
+                      items={cert.items}
+                      headerBgColor="bg-green-600"
+                      headerTextColor="text-white"
+                      variant="skill"
+                    />
+                  </li>
                 ))}
               </ul>
             </div>
           )}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
