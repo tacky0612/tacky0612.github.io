@@ -32,20 +32,21 @@ export const Button = ({
   className = '',
   ...props
 }: ButtonProps) => {
-  const baseStyles = 'font-bold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
-  const variantStyle = disabled 
-    ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+  const baseStyles =
+    'font-bold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+
+  const variantStyle = disabled
+    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
     : variantStyles[variant];
-  
+
   const sizeStyle = sizeStyles[size];
   const widthStyle = fullWidth ? 'w-full' : '';
-  const focusRingColor = disabled 
-    ? '' 
-    : variant === 'ghost' 
-      ? 'focus:ring-gray-500' 
-      : variant === 'success' 
-        ? 'focus:ring-green-500' 
+  const focusRingColor = disabled
+    ? ''
+    : variant === 'ghost'
+      ? 'focus:ring-gray-500'
+      : variant === 'success'
+        ? 'focus:ring-green-500'
         : 'focus:ring-blue-500';
 
   return (

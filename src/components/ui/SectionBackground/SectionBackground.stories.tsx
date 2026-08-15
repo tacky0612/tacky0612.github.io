@@ -39,7 +39,9 @@ export const Default: Story = {
     children: (
       <div>
         <h2 className="text-2xl font-bold mb-4">Section Title</h2>
-        <p className="text-gray-600">This is a section background component with default settings.</p>
+        <p className="text-gray-600">
+          This is a section background component with default settings.
+        </p>
       </div>
     ),
   },

@@ -20,8 +20,8 @@ export const Default: Story = {
         <div className="bg-gray-100 rounded-lg p-8 max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Page Content</h1>
           <p className="text-gray-600">
-            This is example content wrapped in the Layout component.
-            The Layout provides a consistent header and footer across all pages.
+            This is example content wrapped in the Layout component. The Layout provides a
+            consistent header and footer across all pages.
           </p>
         </div>
       </div>
@@ -81,9 +81,9 @@ export const WithLongContent: Story = {
             <div key={i} className="bg-gray-100 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Section {i + 1}</h3>
               <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris.
               </p>
             </div>
           ))}

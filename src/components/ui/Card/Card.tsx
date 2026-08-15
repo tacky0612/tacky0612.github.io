@@ -28,22 +28,21 @@ export const Card: React.FC<CardProps> = ({
   variant = 'default',
 }) => {
   const hasHeader = title || icon || imageUrl;
-  
-  const baseCardStyles = variant === 'skill' 
-    ? 'border rounded-lg h-full shadow-sm hover:shadow-md transition-shadow'
-    : 'rounded-lg shadow-sm hover:shadow-md transition-shadow';
+
+  const baseCardStyles =
+    variant === 'skill'
+      ? 'border rounded-lg h-full shadow-sm hover:shadow-md transition-shadow'
+      : 'rounded-lg shadow-sm hover:shadow-md transition-shadow';
 
   return (
     <div className={`${baseCardStyles} ${className}`}>
       {hasHeader && (
-        <div className={`${headerBgColor} ${headerTextColor} p-3 rounded-t-lg flex items-center ${headerClassName}`}>
+        <div
+          className={`${headerBgColor} ${headerTextColor} p-3 rounded-t-lg flex items-center ${headerClassName}`}
+        >
           {icon && <span className="mr-3 text-xl">{icon}</span>}
           {imageUrl && (
-            <img 
-              src={imageUrl} 
-              alt={title || ''} 
-              className="mr-3 h-6 w-6 brightness-0 invert" 
-            />
+            <img src={imageUrl} alt={title || ''} className="mr-3 h-6 w-6 brightness-0 invert" />
           )}
           {title && <span className="font-semibold">{title}</span>}
         </div>
