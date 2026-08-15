@@ -24,20 +24,15 @@ export const Section = ({
 }: SectionProps) => {
   const paddingStyle = paddingStyles[padding];
   const baseStyles = 'scroll-mt-20';
-  
+
   const content = containerized ? (
-    <div className="container mx-auto px-4">
-      {children}
-    </div>
+    <div className="container mx-auto px-4">{children}</div>
   ) : (
     children
   );
 
   return (
-    <section
-      id={id}
-      className={`${baseStyles} ${paddingStyle} ${className}`}
-    >
+    <section id={id} className={`${baseStyles} ${paddingStyle} ${className}`}>
       {content}
     </section>
   );

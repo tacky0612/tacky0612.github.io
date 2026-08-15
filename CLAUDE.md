@@ -19,16 +19,20 @@ npm run build:app      # アプリのみ
 npm run lint           # ESLint（--fix は lint:fix）
 npm run typecheck      # tsc --noEmit（型チェックはここでのみ実行）
 npm run format         # Prettier で src/ を整形（format:check で確認のみ）
+npm run test           # Vitest（1回実行）。test:watch は監視モード
+npm run coverage       # Vitest + カバレッジ（coverage/ に出力）
 npm run preview        # ビルド成果物のプレビュー
 ```
 
-テストランナーは無い。コンポーネントの動作確認は Storybook で行う。
+テストは **Vitest + Testing Library**（jsdom 環境）。テストは対象と同じ階層に `Xxx.test.tsx` として置く。セットアップは `src/test/setup.ts`（jest-dom マッチャー登録・`cleanup`・`vitest-axe` マッチャー登録）。アクセシビリティ検証は `vitest-axe` の `axe()` + `toHaveNoViolations()` を `*.a11y.test.tsx` で行う。UI の見た目確認は Storybook。
 
 ## CI / デプロイ
 
-- **PR validation** (`.github/workflows/pr-validation.yml`): `main` への PR で lint / `tsc --noEmit` / `build:app` / `build:storybook` を Node 18・20 で実行。加えて Prettier 整形チェックと **`src/` 内の `console.*` 検出**（警告扱い）が走る。PR 前に `console.log` 等を残さないこと。
-- **Deploy** (`.github/workflows/deploy.yml`): `main` push で `npm run build` → `dist/` を GitHub Pages へ公開。
-- Dependabot の patch / minor 更新は自動マージ設定あり。
+- **PR validation** (`pr-validation.yml`): `main` への PR で lint / typecheck / build（Node 20・22）、Vitest カバレッジ、Prettier 整形チェック、`src/` の `console.*` 検出を実行。**整形崩れと `console.*` は CI を失敗させる**（`npm audit` のみ情報提供扱い）。
+- **CodeQL** (`codeql.yml`): push / PR / 週次で JS/TS の静的セキュリティ解析。
+- **Lighthouse CI** (`lighthouse.yml` + `lighthouserc.json`): PR で `build:app` の `dist/` を監査。accessibility / SEO は 0.9 未満で失敗、performance / best-practices は警告。
+- **Deploy** (`deploy.yml`): `main` push で `npm run build` → `dist/` を GitHub Pages へ公開。
+- Dependabot: `.github/dependabot.yml` で npm / github-actions を週次更新。patch / minor は `dependabot-auto-merge.yml` で自動マージ。
 
 ## アーキテクチャ
 
