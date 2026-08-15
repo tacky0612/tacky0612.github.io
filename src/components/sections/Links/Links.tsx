@@ -1,6 +1,8 @@
-import { FaGithub, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { SectionBackground } from '../../ui/SectionBackground/SectionBackground';
 import { Section } from '../../ui/Section/Section';
+import { ExternalLink } from '../../ui/ExternalLink/ExternalLink';
 
 const Links: React.FC = () => {
   return (
@@ -10,54 +12,54 @@ const Links: React.FC = () => {
 
         <div className="bg-gray-50 rounded-3xl p-6">
           <div className="flex flex-wrap justify-center gap-6">
-            <a
+            <ExternalLink
               href="https://github.com/tacky0612"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-800 hover:text-gray-600 transition-colors"
+              variant="unstyled"
+              aria-label="GitHub"
+              className="text-gray-800 hover:text-gray-600"
             >
               <FaGithub size={48} />
-            </a>
-            <a
-              href="https://twitter.com/tacky0612"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-500 transition-colors"
+            </ExternalLink>
+            <ExternalLink
+              href="https://x.com/tacky0612"
+              variant="unstyled"
+              aria-label="X"
+              className="text-gray-900 hover:text-gray-700"
             >
-              <FaTwitter size={48} />
-            </a>
-            <a
+              <FaXTwitter size={48} />
+            </ExternalLink>
+            <ExternalLink
               href="https://instagram.com/tacky0612"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-pink-600 hover:text-pink-700 transition-colors"
+              variant="unstyled"
+              aria-label="Instagram"
+              className="text-pink-600 hover:text-pink-700"
             >
               <FaInstagram size={48} />
-            </a>
-            <a
+            </ExternalLink>
+            <ExternalLink
               href="https://www.youtube.com/channel/UC2_GzSBKDFw2enGzea7ZZ2w"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-red-600 hover:text-red-700 transition-colors"
+              variant="unstyled"
+              aria-label="YouTube"
+              className="text-red-600 hover:text-red-700"
             >
               <FaYoutube size={48} />
-            </a>
-            <a
+            </ExternalLink>
+            <ExternalLink
               href="http://tacky0612.hatenablog.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
+              variant="unstyled"
+              aria-label="はてなブログ"
+              className="hover:opacity-80"
             >
               <img src="/images/hatena-blog-logo-s.png" alt="hatenablog" className="h-12 w-12" />
-            </a>
-            <a
+            </ExternalLink>
+            <ExternalLink
               href="https://atcoder.jp/users/tacky0612"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
+              variant="unstyled"
+              aria-label="AtCoder"
+              className="hover:opacity-80"
             >
               <img src="/images/atcoder-logo.svg" alt="atcoder" className="h-12 w-12" />
-            </a>
+            </ExternalLink>
           </div>
         </div>
       </SectionBackground>

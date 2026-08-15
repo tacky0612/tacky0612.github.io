@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
     {
       skill: 'Bootstrap',
       icon: <FaBootstrap />,
-      items: ['趣味程度です。このサイトはBootstrapを利用しています。'],
+      items: ['趣味程度です。'],
     },
     {
       skill: 'JavaScript / TypeScript',
@@ -53,12 +53,12 @@ const Skills: React.FC = () => {
     {
       skill: 'Vue.js',
       icon: <FaVuejs />,
-      items: ['趣味程度です。このサイトはVueで作られています。'],
+      items: ['趣味程度です。'],
     },
     {
       skill: 'React',
       icon: <FaReact />,
-      items: ['2024年から実務利用', 'コンポーネントベースの画面開発'],
+      items: ['2024年から実務利用', 'コンポーネントベースの画面開発', 'このサイトもReactで作られています。'],
     },
     { skill: 'C#', icon: <FaServer />, items: ['2020年から実務利用', 'サーバーサイドの開発'] },
     {
@@ -125,6 +125,7 @@ const Skills: React.FC = () => {
               onClick={() => setShowProgramming(!showProgramming)}
               variant="primary"
               size="lg"
+              aria-expanded={showProgramming}
             >
               Programming Language / Framework / Skill
             </Button>
@@ -132,8 +133,8 @@ const Skills: React.FC = () => {
           {showProgramming && (
             <div className="bg-blue-50 p-6 rounded-lg">
               <ul className="flex flex-wrap justify-center">
-                {programmingSkills.map((skill, index) => (
-                  <li key={index} className="m-2 w-64">
+                {programmingSkills.map((skill) => (
+                  <li key={skill.skill} className="m-2 w-64">
                     <Card
                       title={skill.skill}
                       icon={skill.icon}
@@ -156,6 +157,7 @@ const Skills: React.FC = () => {
               onClick={() => setShowCertifications(!showCertifications)}
               variant="success"
               size="lg"
+              aria-expanded={showCertifications}
             >
               Certification / Licence
             </Button>
@@ -163,8 +165,8 @@ const Skills: React.FC = () => {
           {showCertifications && (
             <div className="bg-green-50 p-6 rounded-lg">
               <ul className="flex flex-wrap justify-center">
-                {certifications.map((cert, index) => (
-                  <li key={index} className="m-2 w-64">
+                {certifications.map((cert) => (
+                  <li key={cert.skill} className="m-2 w-64">
                     <Card
                       title={cert.skill}
                       icon={cert.icon}

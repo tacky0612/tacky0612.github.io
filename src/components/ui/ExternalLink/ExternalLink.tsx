@@ -1,17 +1,17 @@
-import { ReactNode } from 'react';
+import { AnchorHTMLAttributes, ReactNode } from 'react';
 
-interface ExternalLinkProps {
+interface ExternalLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
   href: string;
   children: ReactNode;
-  className?: string;
   showIcon?: boolean;
-  variant?: 'default' | 'primary' | 'secondary';
+  variant?: 'default' | 'primary' | 'secondary' | 'unstyled';
 }
 
 const variantStyles = {
   default: 'text-blue-600 hover:text-blue-800',
   primary: 'text-white hover:text-gray-200',
   secondary: 'text-gray-600 hover:text-gray-800',
+  unstyled: '',
 };
 
 export const ExternalLink = ({
@@ -20,6 +20,7 @@ export const ExternalLink = ({
   className = '',
   showIcon = false,
   variant = 'default',
+  ...rest
 }: ExternalLinkProps) => {
   const variantStyle = variantStyles[variant];
   const baseStyles = 'transition-colors underline-offset-2';
@@ -30,6 +31,7 @@ export const ExternalLink = ({
       target="_blank"
       rel="noopener noreferrer"
       className={`${baseStyles} ${variantStyle} ${className}`}
+      {...rest}
     >
       {children}
       {showIcon && (

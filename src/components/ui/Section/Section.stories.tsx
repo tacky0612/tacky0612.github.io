@@ -73,7 +73,7 @@ export const Containerized: Story = {
     children: (
       <div className="bg-green-50 p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">Containerized Section</h2>
-        <p>This section's content is wrapped in a container with horizontal padding.</p>
+        <p>This section&apos;s content is wrapped in a container with horizontal padding.</p>
       </div>
     ),
   },

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Button } from '../../ui/Button/Button';
 
@@ -22,17 +21,30 @@ const Header: React.FC = () => {
     }
   };
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsOpen(false);
+  };
+
   return (
     <header className="w-full shadow-md fixed top-0 z-50 bg-sky-400">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <h1 className="text-xl font-bold">
-            <Link to="/" className="text-gray-900 hover:text-gray-700">
+            <a href="#" onClick={scrollToTop} className="text-gray-900 hover:text-gray-700">
               tacky0612.github.io
-            </Link>
+            </a>
           </h1>
 
-          <Button onClick={toggleMenu} variant="ghost" size="sm" className="md:hidden !p-2">
+          <Button
+            onClick={toggleMenu}
+            variant="ghost"
+            size="sm"
+            className="md:hidden !p-2"
+            aria-label="メニューを開閉する"
+            aria-expanded={isOpen}
+          >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </Button>
 

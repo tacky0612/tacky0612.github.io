@@ -21,7 +21,7 @@ const Profile: React.FC = () => {
         <p className="text-center text-lg">
           My name is Yu Takitani. (Please call me tacky0612!)
           <br />
-          I'm a software engineer in Tokyo.
+          I&apos;m a software engineer in Tokyo.
           <br />I like sushi.🍣
         </p>
       </SectionBackground>

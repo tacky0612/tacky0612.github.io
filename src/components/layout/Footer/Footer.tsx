@@ -1,4 +1,6 @@
-import { FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { ExternalLink } from '../../ui/ExternalLink/ExternalLink';
 
 const Footer: React.FC = () => {
   return (
@@ -6,33 +8,32 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-end">
           <div className="flex space-x-4 mb-4">
-            <a
+            <ExternalLink
               href="https://github.com/tacky0612"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 text-2xl"
+              variant="primary"
+              aria-label="GitHub"
+              className="text-2xl"
             >
               <FaGithub />
-            </a>
-            <a
-              href="https://twitter.com/tacky0612"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 text-2xl"
+            </ExternalLink>
+            <ExternalLink
+              href="https://x.com/tacky0612"
+              variant="primary"
+              aria-label="X"
+              className="text-2xl"
             >
-              <FaTwitter />
-            </a>
+              <FaXTwitter />
+            </ExternalLink>
           </div>
           <p className="text-white">
-            Create by{' '}
-            <a
+            Created by{' '}
+            <ExternalLink
               href="https://github.com/tacky0612"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 underline"
+              variant="primary"
+              className="underline"
             >
               @tacky0612
-            </a>
+            </ExternalLink>
           </p>
         </div>
       </div>
