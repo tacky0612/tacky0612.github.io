@@ -31,8 +31,8 @@ export const Card: React.FC<CardProps> = ({
 
   const baseCardStyles =
     variant === 'skill'
-      ? 'border rounded-lg h-full shadow-sm hover:shadow-md transition-shadow'
-      : 'rounded-lg shadow-sm hover:shadow-md transition-shadow';
+      ? 'border border-gray-200 rounded-lg h-full shadow-xs hover:shadow-md transition-shadow'
+      : 'rounded-lg shadow-xs hover:shadow-md transition-shadow';
 
   return (
     <div className={`${baseCardStyles} ${className}`}>
