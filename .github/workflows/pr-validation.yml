@@ -161,7 +161,7 @@ jobs:
       # サードパーティに依存せず、公式の actions/github-script で
       # マーカー付きコメントを探して更新（なければ新規作成）する = sticky コメント
       - name: Post sticky PR comment
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           RESULT_VALIDATE: ${{ needs.validate.result }}
           RESULT_TEST: ${{ needs.test.result }}
