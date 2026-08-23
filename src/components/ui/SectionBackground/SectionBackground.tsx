@@ -18,7 +18,7 @@ const paddingStyles = {
 };
 
 const roundedStyles = {
-  sm: 'rounded-sm',
+  sm: 'rounded-xs',
   md: 'rounded-md',
   lg: 'rounded-lg',
   xl: 'rounded-xl',
